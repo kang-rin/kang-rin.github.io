@@ -35,28 +35,27 @@ categories: kangring
   </li> 
 <li>
    로컬에서 작업한 venv는 적용되지 않음 서버에서 로컬에서 사용한 모듈을 
-  </li>
-	
+  </li>	
 </ul>
     
    
 ## yum update
  * 모든 소프트웨어 패키지가 최신 상태로 업데이트되어 있는지 확인하기 위해, 인스턴스에서 퀵 소프트웨어 업데이트를 실행합니다. 이 업데이트 과정은 몇 분 정도 시간이 소요될 수 있지만, 최신 보안 업데이트와 버그 수정을 위해 수행할 필요가 있습니다.
+
 -y 옵션을 사용하면 확인 여부를 묻지 않고 업데이트를 설치합니다. 설치 전에 업데이트 정보를 확인하려면 이 옵션을 생략합니다
- ```
-  [ec2-user ~]$ sudo yum update -y
+ ```[ec2-user ~]$ sudo yum update -y
  ```
 
 * 의존성 설치
  ```
-# yum install -y wget
-# yum install -y net-tools
-# yum install -y gcc
-# yum install -y gcc-c++
-# yum install -y make
-# yum install -y apr
-# yum install -y apr-util
-# yum install -y expat-devel
+ yum install -y wget
+ yum install -y net-tools
+ yum install -y gcc
+ yum install -y gcc-c++
+ yum install -y make
+ yum install -y apr
+ yum install -y apr-util
+ yum install -y expat-devel
 ```
 
 ## apche 설치
