@@ -89,44 +89,45 @@ If you are running RHEL, CentOS or Fedora, you would need both:
  
 ```
 * 2.1 PCRE 설치
-# wget https://sourceforge.net/projects/pcre/files/pcre/8.36/pcre-8.36.tar.gz/download
-# tar xvfz download 
-# cd pcre-8.36
-# ./configure --prefix=/usr/local
-# make
-# make install
+$ wget https://sourceforge.net/projects/pcre/files/pcre/8.36/pcre-8.36.tar.gz/download
+$ tar xvfz download 
+$ cd pcre-8.36
+$ ./configure --prefix=/usr/local
+$ make
+$ make install
 
 * 2.2 apache 설치
-# cd ..
-# wget http://mirror.navercorp.com/apache//httpd/httpd-2.4.39.tar.gz
-# tar xvfz httpd-2.4.39.tar.gz
+$ cd ..
+$ wget http://mirror.navercorp.com/apache//httpd/httpd-2.4.39.tar.gz
+$ tar xvfz httpd-2.4.39.tar.gz
 
 * 2.3  apr 설치
-# wget http://mirror.navercorp.com/apache//apr/apr-1.7.0.tar.gz
-# tar xvfz apr-1.7.0.tar.gz
+$ wget http://mirror.navercorp.com/apache//apr/apr-1.7.0.tar.gz
+$ tar xvfz apr-1.7.0.tar.gz
 
 * 2.4 apr-util 설치
-# http://mirror.navercorp.com/apache//apr/apr-util-1.6.1.tar.gz
-# tar xvfz apr-util-1.6.1.tar.gz
+$ http://mirror.navercorp.com/apache//apr/apr-util-1.6.1.tar.gz
+$ tar xvfz apr-util-1.6.1.tar.gz
 
 * 2.5 apr과 apr-util을 아파치의 srclib 디렉터리 안으로 이동
-# mv apr-1.7.0 httpd-2.4.39/srclib/apr
-# mv apr-util-1.6.1 httpd-2.4.39/srclib/apr-util
+$ mv apr-1.7.0 httpd-2.4.39/srclib/apr
+$ mv apr-util-1.6.1 httpd-2.4.39/srclib/apr-util
 
 * 2.6 아파치 configure
-# cd httpd-2.4.39
-# ./configure \
-# --prefix=/usr/local/apache2.4 \
-# --with-included-apr \
-# -with-pcre=/usr/local/bin/pcre-config
-# make
-# make install
+$ cd httpd-2.4.39
+$ ./configure \
+$ --prefix=/usr/local/apache2.4 \
+$ --with-included-apr \
+$ -with-pcre=/usr/local/bin/pcre-config
+$ make
+$ make install
 
 * 2.7에러시
-# yum install -y expat-devel
-# make clean
-# make
+$ yum install -y expat-devel
+$ make clean
+$ make
 
+```
 root@ip-172-31-46-69 httpd-2.4.39]# /usr/local/apache2.4/bin/apachectl start
 [root@ip-172-31-46-69 httpd-2.4.39]# ps -aux | grep http
 root      8342  0.0  0.4  74992  4316 ?        Ss   01:53   0:00 /usr/local/apache2.4/bin/httpd -k start
@@ -153,7 +154,6 @@ DocumentRoot "/www/test"
                 Require all granted
         </Directory>
 </VirtualHost>
-
 ```
 
 ## 파이썬 설치
@@ -161,6 +161,7 @@ DocumentRoot "/www/test"
 $ sudo yum install python3
 현재기준으로 3.3.7
 /lib/python3.7/
+
 ```
 ## mod_wsgi
 * 1.mod_wsgi 패키시 설치
@@ -174,16 +175,17 @@ yum install python3-devel
 * 2.mod_wsgi 소스컴파일설치<br>
 설치참고 <https://taetaetae.github.io/2018/06/29/simple-web-server-flask-apache/><br>
 공식가이드 <https://modwsgi.readthedocs.io/en/develop/user-guides/quick-installation-guide.html><br>
+
 ```
 * 2.1 mod_wsgi다운로드
-# wget https://github.com/GrahamDumpleton/mod_wsgi/archive/4.6.5.tar.gz
-# tar xvfz 4.6.5.tar.gz
-# cd mod_wsgi-4.6.5/
-# ./configure --with-apxs=/usr/bin/apxs \
+$ wget https://github.com/GrahamDumpleton/mod_wsgi/archive/4.6.5.tar.gz
+$ tar xvfz 4.6.5.tar.gz
+$ cd mod_wsgi-4.6.5/
+$ ./configure --with-apxs=/usr/bin/apxs \
   --with-python=/bin/python3.7
   
   헤더가 없다는 에러일경우
-  # yum install python3-devel
+  $ yum install python3-devel
   
   find -name 'apxs' -print
   모듈추가
@@ -199,7 +201,6 @@ yum install python3-devel
 <https://modwsgi.readthedocs.io/en/develop/user-guides/virtual-environments.html>
 
 ```
-
 <VirtualHost *:80>
 	WSGIScriptAlias / /www/myapp/config/wsgi.py
 	WSGIDaemonProcess myapp.io python-path=/lib/python3.7/site-packages
@@ -230,6 +231,7 @@ python3     python3.7   python3.7m
 python3     python3.7   python3.7m  
 [root@ip-122-00-00-00 bin]# update-alternatives --install /bin/python python /bin/python3.7 2
 [root@ip-122-00-00-00 bin]# update-alternatives --config python
+```
 
 2 개의 프로그램이 'python'를 제공합니다.
 
