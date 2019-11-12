@@ -1,1 +1,10 @@
 theme: jekyll-theme-cayman
+
+locale                   : "en-US"
+title                    : "Site Title"
+title_separator          : "-"
+name                     : "kangrin"
+description              : "kangrin dev"
+url                      : "https://kang-rin.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
+repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
