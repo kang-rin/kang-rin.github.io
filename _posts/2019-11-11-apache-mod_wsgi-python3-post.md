@@ -44,11 +44,11 @@ categories: kangring
 
 -y 옵션을 사용하면 확인 여부를 묻지 않고 업데이트를 설치합니다. 설치 전에 업데이트 정보를 확인하려면 이 옵션을 생략합니다
  ```
- [ec2-user ~]$ sudo yum update -y
+ $ sudo yum update -y
  ```
 
 * 의존성 설치
- ```
+```
 $ yum install -y wget
 $ yum install -y net-tools
 $ yum install -y gcc
@@ -124,7 +124,6 @@ $ yum install -y expat-devel
 $ make clean
 $ make
 
-```
 root@ip-172-31-46-69 httpd-2.4.39]# /usr/local/apache2.4/bin/apachectl start
 [root@ip-172-31-46-69 httpd-2.4.39]# ps -aux | grep http
 root      8342  0.0  0.4  74992  4316 ?        Ss   01:53   0:00 /usr/local/apache2.4/bin/httpd -k start
@@ -158,17 +157,17 @@ DocumentRoot "/www/test"
 $ sudo yum install python3
 현재기준으로 3.3.7
 /lib/python3.7/
-
 ```
+
 ## mod_wsgi
 * 1.mod_wsgi 패키시 설치
+
 ```
 mod_wsgi를 설치하여 아파치로 파이썬을 띄울수있게
-pip3 install mod_wsgi
+$ pip3 install mod_wsgi
 에러 날경우
-yum install python3-devel
+$ yum install python3-devel
 ```
-
 * 2.mod_wsgi 소스컴파일설치<br>
 설치참고 <https://taetaetae.github.io/2018/06/29/simple-web-server-flask-apache/><br>
 공식가이드 <https://modwsgi.readthedocs.io/en/develop/user-guides/quick-installation-guide.html><br>
@@ -226,7 +225,7 @@ python3     python3.7   python3.7m
 python3     python3.7   python3.7m  
 [root@ip-122-00-00-00 bin]# update-alternatives --install /bin/python python /bin/python3.7 2
 [root@ip-122-00-00-00 bin]# update-alternatives --config python
-```
+
 
 2 개의 프로그램이 'python'를 제공합니다.
 
