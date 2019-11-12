@@ -49,14 +49,14 @@ categories: kangring
 
 * 의존성 설치
  ```
- yum install -y wget
- yum install -y net-tools
- yum install -y gcc
- yum install -y gcc-c++
- yum install -y make
- yum install -y apr
- yum install -y apr-util
- yum install -y expat-devel
+$ yum install -y wget
+$ yum install -y net-tools
+$ yum install -y gcc
+$ yum install -y gcc-c++
+$ yum install -y make
+$ yum install -y apr
+$ yum install -y apr-util
+$ yum install -y expat-devel
 ```
 
 ## apche 설치
@@ -71,14 +71,14 @@ categories: kangring
 If you are running Debian or Ubuntu Linux with Apache 2.4 system packages, regardless of which Apache MPM is being used, you would need both:
 If you are running RHEL, CentOS or Fedora, you would need both:
 
- sudo yum install httpd
- sudo yum install httpd-devel
+ $ sudo yum install httpd
+ $ sudo yum install httpd-devel
  
- systemctl stop httpd.service
- systemctl restart httpd.service
- systemctl start httpd.service
- systemctl start vsftpd@vsftpd.service
- systemctl status httpd
+ $ systemctl stop httpd.service
+ $ systemctl restart httpd.service
+ $ systemctl start httpd.service
+ $ systemctl start vsftpd@vsftpd.service
+ $ systemctl status httpd
 
 ```
 
