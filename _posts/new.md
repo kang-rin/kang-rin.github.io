@@ -1,3 +1,11 @@
+---
+title: "Welcome to Jekyll!"
+date: 2017-10-20 08:26:28 -0400
+categories: jekyll update
+---
+
+
+
 #### 빈 프로젝트 생성 해서 push
 1.git init  :  .git 생성
 2.git add 
