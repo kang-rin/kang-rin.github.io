@@ -61,9 +61,8 @@ $ yum install -y expat-devel
 
 ## apche 설치
 * 참고
-```
 <http://progtrend.blogspot.com/2018/06/amazon-linux-2-apache-web-server.html>
-```
+
 * 1.패키지로 설치 하기
 <https://pypi.org/project/mod-wsgi/>
 
@@ -71,16 +70,13 @@ $ yum install -y expat-devel
 If you are running Debian or Ubuntu Linux with Apache 2.4 system packages, regardless of which Apache MPM is being used, you would need both:
 If you are running RHEL, CentOS or Fedora, you would need both:
 
- $ sudo yum install httpd
- $ sudo yum install httpd-devel
- 
- $ systemctl stop httpd.service
- $ systemctl restart httpd.service
- $ systemctl start httpd.service
- $ systemctl start vsftpd@vsftpd.service
- $ systemctl status httpd
-
-```
+$ sudo yum install httpd
+$ sudo yum install httpd-devel 
+$ systemctl stop httpd.service 
+$ systemctl restart httpd.service
+$ systemctl start httpd.service
+$ systemctl start vsftpd@vsftpd.service
+$ systemctl status httpd
 
 * 2.소스 컴파일
 
@@ -88,7 +84,7 @@ If you are running RHEL, CentOS or Fedora, you would need both:
  설치파일  <https://apr.apache.org/download.cgi><br>
  APR 참고  <https://victorydntmd.tistory.com/220><br>
  
-```
+ 
 * 2.1 PCRE 설치
 $ wget https://sourceforge.net/projects/pcre/files/pcre/8.36/pcre-8.36.tar.gz/download
 $ tar xvfz download 
@@ -191,8 +187,6 @@ $ ./configure --with-apxs=/usr/bin/apxs \
   find -name 'apxs' -print
   모듈추가
  LoadModule wsgi_module modules/mod_wsgi.so
-
-
 ```
 
 
