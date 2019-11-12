@@ -8,6 +8,7 @@ categories: kangring
 [공통] aws ec2에서 apache + modi_wsgi + django 웹서버 설치
 ============================================
  * 구성
+ 
  ```
  Amazon Linux2 (contos 기반)
  apache 2.4
