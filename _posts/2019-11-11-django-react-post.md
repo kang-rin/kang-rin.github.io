@@ -62,6 +62,7 @@ REST_FRAMEWORK = {
 ```
 
 **2.django-cors-headers 설치**
+
 분리된 서버에서는 Cross-Domain의 잇슈가 있기때문에 script에서의 api통신을 통한 데이터의 접근제어를 위해 (CORS : Cross-Origin Resource Sharing)를 추가해준다.
 ```
 $ pip3 install django-cors-headers
