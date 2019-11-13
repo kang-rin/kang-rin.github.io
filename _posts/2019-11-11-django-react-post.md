@@ -30,7 +30,6 @@ Cross-Domain 이슈를 제한함(Cross-Domain Policy)
 첫번째 방식으로 프로젝트를 구성한다. 대신 첫번째 방식은 SPA의 특성상 검색엔진의 최적화가 되지 않기 때문에 SEO를 위한 **SSR**의 추가 작업필요
 
 
-# 구성 시작 
 ## Django Rest Framework
 우선 Django부터 설치한다. Django에 대한 설치 방법은 별도로 이야기 하지 않는다.
 
@@ -59,5 +58,38 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny',
     ]
 }
+
+```
+
+**2.django-cors-headers 설치**
+분리된 서버에서는 Cross-Domain의 잇슈가 있기때문에 script에서의 api통신을 통한 데이터의 접근제어를 위해 (CORS : Cross-Origin Resource Sharing)를 추가해준다.
+```
+$ pip3 install django-cors-headers
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'django.contrib.humanize',
+    'cms',
+    'rest_framework', # 추가
+    'corsheaders', # 추가
+]
+
+MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',  # 추가
+    'django_hosts.middleware.HostsRequestMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_hosts.middleware.HostsResponseMiddleware',
+]
 
 ```
