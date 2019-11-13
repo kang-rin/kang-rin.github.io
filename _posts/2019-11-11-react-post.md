@@ -56,7 +56,7 @@ class MyComponent extends Component {
             number:0, //number state에 초기값세팅
         }
     }
-    
+ 
     //밖으로 빼도된다.
     state={
         number:0, //number state에 초기값세팅
@@ -77,5 +77,24 @@ class MyComponent extends Component {
         );
     }
 }
+
+함수형 컴포넌트 useState Hooks
+
+import React,{useState} from 'react';
+
+const MyComponent = () => {
+    const [message,setMessage] = useState('')
+    //1번째인자값(message) 변수, 두번인자값(setMessage)해당 변수에 set하는 함수명
+    //set함수 사용방법
+    const onClickFun=()=> setMessage('hello')
+     return (
+        <div>
+            
+        </div>
+    );
+};
+
+export default MyComponent;
+
 
 ```
