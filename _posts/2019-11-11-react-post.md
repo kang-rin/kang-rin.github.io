@@ -37,15 +37,15 @@ React JSX 는 XML-like Syntax 를 native Javascript로 변환해줍니다.
 ```
 
 ## 문법
-**1. 컴포넌트명은 캬멜케이스로 **
+**1.컴포넌트명은 캬멜케이스로**
 
 ex)MyComponent <MyComponent/>
 
-**2. state**
-컨포넌트 내부에서 변할수 있는값
-```
-class형 컴포넌트의 state
+**2.state**
 
+컨포넌트 내부에서 변할수 있는값
+class형 컴포넌트의 state
+```
 import React, {Component} from 'react';
 
 class MyComponent extends Component {
@@ -61,24 +61,29 @@ class MyComponent extends Component {
     state={
         number:0, //number state에 초기값세팅
     }
+    // state의 상태값은 setState에서 변경한다.
+    this.setState({
+         number:this.state.number +1
+    })    
+    // 비동기로 인해 데이터가 변경되지 않을때 이전의 state의 값으로 새로운 state를 생성할때
+    this.setState((prevState,props) => {
+        return {
+            //이전의 state불러옴
+            number:prevState.number+1
+         }
+     })
     
-    onClickFun = ()=>{
-        // state의 상태값은 setState에서 변경한다.
-        this.setState({
-            number:this.state.number +1
-        })
-    }
-    render() {
-        const {number} = this.state.number //steate에 접근
-        return (
-            <div >
+    //steate에 접근
+    const {number} = this.state.number 
+    
+    .
+    .
+    .
+ ```
+ 
+ 함수형 컴포넌트 useState Hooks
 
-            </div>
-        );
-    }
-}
-
-함수형 컴포넌트 useState Hooks
+ ```
 
 import React,{useState} from 'react';
 
