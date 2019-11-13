@@ -8,7 +8,7 @@ categories: kangring
 
 # Mac에서 react설치 
 ## 들어가기전
- 공식싸이트?: [reactjs-kr](https://reactjs-kr.firebaseapp.com/docs/installation.html, "참조")
+ : [reactjs-kr](https://reactjs-kr.firebaseapp.com/docs/installation.html, "참조")
 
 * webpack
 ```
