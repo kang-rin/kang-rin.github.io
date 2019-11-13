@@ -40,6 +40,8 @@ $ pip3 install djangorestframework
 
 설치가 완료되면 setting.py의 apps에 추가해준다.
 ```
+/myapp/settings.py
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -65,6 +67,8 @@ REST_FRAMEWORK = {
 
 분리된 서버에서는 Cross-Domain의 잇슈가 있기때문에 script에서의 api통신을 통한 데이터의 접근제어를 위해 (CORS : Cross-Origin Resource Sharing)를 추가해준다.
 ```
+/myapp/settings.py
+
 $ pip3 install django-cors-headers
 
 INSTALLED_APPS = [
@@ -93,6 +97,8 @@ MIDDLEWARE = [
     'django_hosts.middleware.HostsResponseMiddleware',
 ]
 
+CORS_ORIGIN_WHITELIST = ['http://localhost:3000']
+#script안에서의 리소스 요청을 허용할 도메인 추가
 ```
 
 **3.DRF API 구성**
@@ -100,3 +106,14 @@ MIDDLEWARE = [
 fornt에 데이터를 전송 할 수있는 샘플 API를 구성한다. 
 자세한 내용은 링크 참조
 [DF API구성](https://this-programmer.com/entry/%EA%B0%84%EB%8B%A8%ED%95%9C-react-JS-Django-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EB%A7%8C%EB%93%A4%EA%B8%B0)
+
+**4.react 설치**
+```
+$ npm install -g create-react-app # 글로벌로 cra 설치
+$ create-react-app app # cra로 app이라는 리액트 앱 만들기
+$ cd app
+$ npm start
+```
+
+**5.react에서 서버 데이터 수신하기**
+[참고](https://this-programmer.com/entry/%EA%B0%84%EB%8B%A8%ED%95%9C-react-JS-Django-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EB%A7%8C%EB%93%A4%EA%B8%B0)
