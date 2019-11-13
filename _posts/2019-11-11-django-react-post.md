@@ -5,7 +5,7 @@ categories: kangring
 ---
 
 ## 들어가기전
-1.백엔드와 프론트엔드를 분리구성: 각각의 서버와 url로 서로를 연결하는방식 대신에 Cross-Domain 잇슈가 있기 때문에 cros구성해야한다.
+1.백엔드와 프론트엔드를 분리구성: 각각의 서버와 url로 서로를 연결하는방식 대신에 Cross-Domain 잇슈가 있기 때문에 Cors구성해야한다.
 ```
 django는 uWSGI나 gunicorn을 통해 항상 rest-api request에 응답할 수 있는 상태가 돼야하고 외부에는 
 react로 만들어진 frontend가 노출돼있어야한다. 사실상 모든 CRUD작업이 django-rest-framework에 
@@ -19,11 +19,45 @@ react로 만들어진 frontend가 노출돼있어야한다. 사실상 모든 CRU
 [개념참고](https://this-programmer.com/entry/%EA%B0%84%EB%8B%A8%ED%95%9C-react-JS-Django-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EB%A7%8C%EB%93%A4%EA%B8%B0)
 
 **CORS (Cross-Origin Resource Sharing)**
-```
+
 - 요즘 사용되는 모던 브라우저는 자바스크립트 인터프린터가 도입됐으며 보안상의 문제를 막기위해 JS의 동일 출처 정책으로
 Cross-Domain 이슈를 제한함(Cross-Domain Policy)
 - 보안상의 문제 없이 Ajax등의 통신을 하기 위해 사용되는 메커니즘이 CORS이다.
-- * CORS 표준은 웹 브라우저가 사용하는 정보를 읽을 수 있도록 허가된 출처 집합를 서버에게 알려주도록 
+- CORS 표준은 웹 브라우저가 사용하는 정보를 읽을 수 있도록 허가된 출처 집합를 서버에게 알려주도록 
 허용하는 HTTP 헤더를 추가함으로써 동작
+
+## 종합
+첫번째 방식으로 프로젝트를 구성한다. 대신 첫번째 방식은 SPA의 특성상 검색엔진의 최적화가 되지 않기 때문에 SEO를 위한 **SSR**의 추가 작업필요
+
+
+# 구성 시작 
+## Django Rest Framework
+우선 Django부터 설치한다. Django에 대한 설치 방법은 별도로 이야기 하지 않는다.
+
+**1.DRF설치**
+```
+$ pip3 install djangorestframework
+```
+
+설치가 완료되면 setting.py의 apps에 추가해준다.
+```
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'django.contrib.humanize',
+    'cms',
+    'rest_framework', # 추가
+]
+
+#이하 추가
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ]
+}
 
 ```
