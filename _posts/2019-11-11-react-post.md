@@ -35,3 +35,47 @@ React JSX 는 XML-like Syntax 를 native Javascript로 변환해줍니다.
 2.create-react-app hello-react //react app 설치
 3.nmp start //app run
 ```
+
+## 문법
+**1. 컴포넌트명은 캬멜케이스로 **
+
+ex)MyComponent <MyComponent/>
+
+**2. state**
+컨포넌트 내부에서 변할수 있는값
+```
+class형 컴포넌트의 state
+
+import React, {Component} from 'react';
+
+class MyComponent extends Component {
+    // 기본적으로 constructor서 state를 셋팅하지만 
+    constructor(props){
+        super(props);
+        this.state={
+            number:0, //number state에 초기값세팅
+        }
+    }
+    
+    //밖으로 빼도된다.
+    state={
+        number:0, //number state에 초기값세팅
+    }
+    
+    onClickFun = ()=>{
+        // state의 상태값은 setState에서 변경한다.
+        this.setState({
+            number:this.state.number +1
+        })
+    }
+    render() {
+        const {number} = this.state.number //steate에 접근
+        return (
+            <div >
+
+            </div>
+        );
+    }
+}
+
+```
