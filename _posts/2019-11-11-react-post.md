@@ -44,6 +44,7 @@ ex)MyComponent <MyComponent/>
 **2.state**
 
 컨포넌트 내부에서 변할수 있는값
+
 class형 컴포넌트의 state
 ```
 import React, {Component} from 'react';
@@ -80,6 +81,26 @@ class MyComponent extends Component {
     .
     .
  ```
+ 
+ 
+ 
+ 클래스형 컴포넌드에서 input value값 동시에 여러개 변경
+ ```
+ handleChange = e=>{
+        this.setState({
+           [e.target.name]:e.target.value
+        });
+ }
+ 
+ <input
+  type={"text"}
+  name={"number"}
+  value={this.state.number}
+   onChange={this.handleChange}
+/>
+    
+ ```
+ 
  
  함수형 컴포넌트 useState Hooks
 
