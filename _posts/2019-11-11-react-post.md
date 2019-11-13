@@ -1,5 +1,5 @@
 ---
-title: "ract"
+title: "react 설치 및 기본 구성"
 date: 2019-11-11
 categories: kangring
 ---
