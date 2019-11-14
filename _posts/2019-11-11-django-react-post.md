@@ -140,5 +140,11 @@ $ aws s3 sync ./build s3://버켓명 --profile=AMI사용자명
  
  $ yarn deploy
 ```
+
+**캐시 Purg**
+```
+aws cloudfront create-invalidation --distribution-id {CDN ID} --paths "/*"
+
+```
 [참고](https://react-etc.vlpt.us/08.deploy-s3.html)
 
