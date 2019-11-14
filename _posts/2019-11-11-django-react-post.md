@@ -129,5 +129,16 @@ $ npm start
     <li>AWS CLI을 통하여 local에서 s3에 소스를 deploy한다.</li>
 </ul>
 
+**소스 배포**
+```
+$ aws s3 sync ./build s3://버켓명 --profile=AMI사용자명
+
+혹은 package.json에 추가 
+"scripts": {
+    "deploy":aws s3 sync ./build s3://버켓명 --profile=AMI사용자명
+ }
+ 
+ $ yarn deploy
+```
 [참고](https://react-etc.vlpt.us/08.deploy-s3.html)
 
