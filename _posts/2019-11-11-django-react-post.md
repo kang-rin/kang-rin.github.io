@@ -135,7 +135,7 @@ $ aws s3 sync ./build s3://버켓명 --profile=AMI사용자명
 
 혹은 package.json에 추가 
 "scripts": {
-    "deploy":aws s3 sync ./build s3://버켓명 --profile=AMI사용자명
+    "deploy":aws s3 sync ./build s3://버켓명 --profile=IAM사용자명
  }
  
  $ yarn deploy
