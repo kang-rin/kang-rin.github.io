@@ -157,7 +157,9 @@ aws cloudfront create-invalidation --distribution-id {CDN ID} --paths "/*"
 
 페이지 캐싱을 확인해보고 cdn의 error page탭의 커스텀 해준다.
 에러 코드 403을 200으로 Response Page path는 inex.html
-[참고1](https://stackoverflow.com/questions/50299204/receive-accessdenied-when-trying-to-access-a-reload-or-refresh-or-one-in-new-tab)<br>
+
+[참고1](https://stackoverflow.com/questions/50299204/receive-accessdenied-when-trying-to-access-a-reload-or-refresh-or-one-in-new-tab
+
 [참고2](https://medium.com/@tech.yangs/cloudfront-error-cache-%EC%82%BD%EC%A7%88%EA%B8%B0-cd9b21affaa2)
 
 
