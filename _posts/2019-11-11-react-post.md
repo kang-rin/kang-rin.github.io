@@ -141,6 +141,18 @@ const MyConponent = ({name,children}) =>{
 
 
 ```
+
+**4.Hooks 성는 최적화 **
+
+1.memo사용
+```
+const Try = memo(()) = >{}
+
+or userMemo
+```
+
+
+
 **99.참고**
 
 1.Hooks는 state가 변할때마다 Hooks의 함수 전체가 재실행된다. <br>
@@ -153,4 +165,7 @@ const MyConponent = ({name,children}) =>{
 7.배열에 값을 입력할때 push하면 리액트가 값이 변경된지 판별 할수 없기때문에 이전배열값에 데이터 를 입력<br>
   const arr:[]<br>
   arr:[...arr,{value}]<br>
-   
+8.배포시 디버그 모드인지 production모드인지 확인 할것 확장도구가 레드이면 디버그 그린이면 production<br>
+9.배포시 리덕스 내용 숨기기React 기본 강좌 3-9. React Devtools<br>
+10.최적화 React 기본 강좌 3-11. PureComponent와 React.memo<br>
+
