@@ -168,4 +168,9 @@ or userMemo
 8.배포시 디버그 모드인지 production모드인지 확인 할것 확장도구가 레드이면 디버그 그린이면 production<br>
 9.배포시 리덕스 내용 숨기기React 기본 강좌 3-9. React Devtools<br>
 10.최적화 React 기본 강좌 3-11. PureComponent와 React.memo<br>
+11.React 기본 강좌 3-13. props와 state 연결하기<br>
+
+last
+React 기본 강좌 5-3. 가위바위보 게임 만들기
+
 
