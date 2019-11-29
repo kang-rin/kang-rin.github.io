@@ -146,5 +146,11 @@ const MyConponent = ({name,children}) =>{
 1.Hooks는 state가 변할때마다 Hooks의 함수 전체가 재실행된다.
 2.class는 state가 변할때마다 reander 함수가 재실행된다.
 3.동영상 React 기본 강좌 2-3. 웹팩 설치하기
-
-
+4.React 기본 강좌 3-1. import와 require 비교
+5.map 사용키 key값에 고유한값을 부여할때 index부여는 좋지않다.성는최적화지 문제가된다고함 index+value
+  react에서 key를 기준으로 엘리먼트를 추가 하거나 수정 삭제를 판단하기때문에 배열의 순서가 바뀌면 문제가 생긴다. 
+6.()=> 화살표 함수를 쓰지않으면 내부에서 this 접근 불가  
+7.배열에 값을 입력할때 push하면 리액트가 값이 변경된지 판별 할수 없기때문에 이전배열값에 데이터 를 입력
+  const arr:[]
+  arr:[...arr,{value}]
+   
