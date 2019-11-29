@@ -124,3 +124,23 @@ export default MyComponent;
 
 
 ```
+
+**3.props(properties)**
+
+컴포넌트 속성 부모 컴포넌트가 자식에게 설정 해주는 값 <MyComponent name='this is props'>children</MyComponent>
+
+```
+비구조 할당으로 내부값 전달
+const MyConponent = ({name,children}) =>{
+  return (
+    <>
+    {name}{children}
+    </>
+  )
+}
+
+
+```
+
+
+
