@@ -141,6 +141,10 @@ const MyConponent = ({name,children}) =>{
 
 
 ```
+**99.참고**
 
+1.Hooks는 state가 변할때마다 Hooks의 함수 전체가 재실행된다.
+2.class는 state가 변할때마다 reander 함수가 재실행된다.
+3.동영상 React 기본 강좌 2-3. 웹팩 설치하기
 
 
