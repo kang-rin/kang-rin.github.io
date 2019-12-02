@@ -163,3 +163,21 @@ aws cloudfront create-invalidation --distribution-id {CDN ID} --paths "/*"
 [참고2](https://medium.com/@tech.yangs/cloudfront-error-cache-%EC%82%BD%EC%A7%88%EA%B8%B0-cd9b21affaa2)
 
 
+
+## 기타
+**s3 권한 버컷정책 전채공개**
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AddPerm",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::pro-front-deploy/*"
+        }
+    ]
+}
+
+```
