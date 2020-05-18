@@ -2,6 +2,7 @@
 title: aws ec2에서 apache + modi_wsgi + django 웹서버 설치
 category: aws
 order: 1
+date: 2019-11-11
 ---
 
 ============================================
