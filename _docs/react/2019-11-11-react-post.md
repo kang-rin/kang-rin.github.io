@@ -1,7 +1,8 @@
 ---
-title: "react 설치 및 기본 구성"
-date: 2019-11-11
-categories: kangring
+title: react 설치 및 기본 구성
+category: react
+order: 1
+date: 2019-12-21
 ---
 
 

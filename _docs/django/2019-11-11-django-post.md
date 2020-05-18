@@ -1,8 +1,8 @@
 ---
 title: 복수 APP에서 templates 설정
 category: django
-order: 2
-date: 2019-11-11
+order: 1
+date: 2019-10-11
 ---
 
 ```

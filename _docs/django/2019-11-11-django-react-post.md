@@ -1,7 +1,8 @@
 ---
 title: "django와react js 연동"
 date: 2019-11-11
-categories: kangring
+category: django
+order: 2
 ---
 
 ## 들어가기전

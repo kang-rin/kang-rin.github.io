@@ -1,7 +1,8 @@
 ---
-title: "python"
-date: 2019-11-11
-categories: kangring
+title: python
+category: python
+order: 1
+date: 2019-12-21
 ---
 
 ## 리스트 컴프리헨션
