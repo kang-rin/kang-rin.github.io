@@ -266,8 +266,10 @@ nav > ul {
 .nav-item2 {
 	font-family: "Open Sans", sans-serif;
 	line-height: 1;
-	padding-left: 10px;
-
+	li{
+		padding-left: 10px;
+		border: 1px solid red;
+	}
 	nav:not(.full-navigation) & > ul {
 		display: none;
 	}
