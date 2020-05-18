@@ -1,11 +1,9 @@
 ---
-title: test
+title: aws ec2에서 apache + modi_wsgi + django 웹서버 설치
 category: aws
 order: 1
 ---
 
-
-[공통] aws ec2에서 apache + modi_wsgi + django 웹서버 설치
 ============================================
  * 구성
  
