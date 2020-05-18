@@ -48,10 +48,9 @@
 				<ul>
 					{% assign grouped = site.docs | group_by: 'category' %}
 					{% for group in grouped %}
-					{{items}}--<br>
 						<li class="nav-item top-level {% if group.name == page.category %}current{% endif %}">
 							{% assign items = group.items | sort: 'order' %}
-							<a href="{{ site.baseurl }}{{ items.first.url }}">{{ group.name }}</a>
+							<a href="{{ site.baseurl }}/{{  group.name }}/index/">{{ group.name }}</a>
 						</li>
 					{% endfor %}
 				</ul>
