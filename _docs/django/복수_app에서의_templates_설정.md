@@ -2,7 +2,7 @@
 ---
 title: 복수 APP에서 templates 설정
 category: django
-order: 2
+order: 1
 ---
 
 ```
