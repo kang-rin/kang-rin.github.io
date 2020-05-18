@@ -6,6 +6,7 @@ title: index
     <ul>
         {% assign grouped = site.docs | group_by: 'category' %}
         {% for group in grouped %}
+       //// {{ group.name }}////
         <li class="nav-item top-level {% if group.name == page.category %}current{% endif %}">
             {% assign items = group.items | sort: 'order' %}
            <a href="{{ site.baseurl }}/{{  group.name }}/index/"><h4>{{ group.name }}</h4></a>
