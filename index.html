@@ -12,7 +12,7 @@ title: index
         <ul>
             {% for item in items %}
             <li class="nav-item {% if item.url == page.url %}current{% endif %}">
-                <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a> <span  style="padding-left: 5px;">{{ item.date | date: "%Y-%m-%d" }}</span></li>
+                <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a> <span  class="my-date">{{ item.date | date: "%Y-%m-%d" }}</span></li>
             {% endfor %}
         </ul>
     </li>
