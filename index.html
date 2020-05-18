@@ -2,10 +2,9 @@
 title: index
 ---
 cccc
-
-
+{{site.docs.category}}
 <div class="changelog">
-	{% for change in site.docs %}
+	{% for change in site.docs.category %}
 		<div class="changelog-item">
 			<h3>{{ change.category }}</h3>
 			<h3>{{ change.title }}</h3>
