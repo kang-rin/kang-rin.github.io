@@ -3,19 +3,36 @@ title: index
 ---
 
 <div class="docs-list">
-	<div><h3>django</h3></div>
-	{% for change in site.docs %}
-		{% if  change.category =='django' %}
-		<div class="changelog-item">
-			<ul>
-				<li>
-					<div class="title"><a href="/{{ change.baseurl }}" class="btn">{{ change.title }}</a><span class="date">{{ change.date | date: "%Y-%m-%d" }}</span></div>
+    <div><h3>django</h3></div>
+    {% for change in site.docs %}
+    {% if change.category =='django' %}
+    <div class="changelog-item">
+        <ul>
+            <li>
+                <div class="title"><a href="/{{ change.baseurl }}" class="btn">{{ change.title }}</a><span class="date">{{ change.date | date: "%Y-%m-%d" }}</span>
+                </div>
 
-				</li>
-			</ul>
-		</div>
-		{%endif%}
-	{% endfor %}
+            </li>
+        </ul>
+    </div>
+    {%endif%}
+    {% endfor %}
 </div>
 
-
+<div class="docs-list">
+<ul>
+    {% assign grouped = site.docs | group_by: 'category' %}
+    {% for group in grouped %}
+    <li class="nav-item top-level {% if group.name == page.category %}current{% endif %}">
+        {% assign items = group.items | sort: 'order' %}
+        <a href="{{ site.baseurl }}{{ items.first.url }}">{{ group.name }}</a>
+        <ul>
+            {% for item in items %}
+            <li class="nav-item {% if item.url == page.url %}current{% endif %}"><a
+                    href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+</ul>
+</div>
