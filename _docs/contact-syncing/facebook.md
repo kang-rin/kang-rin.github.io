@@ -10,7 +10,7 @@ Sync your Facebook contacts with ChatApp. Any of your Facebook friends with Chat
 
 To sync your contacts:
 
-1. Open your *User Settings*sdfsdfasdf
+1. Open your *User Settings*
 2. Select the **Connect Facebook** button
 3. Authorise ChatApp
 
