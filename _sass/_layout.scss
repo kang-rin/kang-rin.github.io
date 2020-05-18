@@ -266,7 +266,7 @@ nav > ul {
 .nav-item2 {
 	font-family: "Open Sans", sans-serif;
 	line-height: 1;
-	margin: 0;
+	margin-left: 10;
 
 	nav:not(.full-navigation) & > ul {
 		display: none;
@@ -280,7 +280,6 @@ nav > ul {
 		color: rgba(6, 6, 6, 0.98);
 		text-decoration: none;
 		font-size: 1.5rem;
-		padding-left: 10px;
 	}
 
 	&.current > a,
@@ -499,7 +498,7 @@ img {
 }
 
 .docs-list {
-	border: 1px solid blue;
+	border: 1px solid red;
 }
 
 
