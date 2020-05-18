@@ -6,7 +6,7 @@ title: Change Log
 
 <p class="editor-link"><a href="cloudcannon:collections/_posts" class="btn"><strong>&#9998;</strong> Update Change Log</a></p>
 <div class="changelog">
-	{% for change in site.category.django %}
+	{% for change in site.categories[django] %}
 		<div class="changelog-item">
 
 			<h3>{{ change.title }}</h3>
