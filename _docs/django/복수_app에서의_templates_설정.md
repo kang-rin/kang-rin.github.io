@@ -1,6 +1,7 @@
+
 ---
 title: 복수 APP에서의 templates 설정
-category:django
+category: django
 order: 2
 ---
 
