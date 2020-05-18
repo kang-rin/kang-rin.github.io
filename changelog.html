@@ -9,6 +9,7 @@ title: Change Log
 <div class="changelog">
 	{% for change in site.docs %}
 		<div class="changelog-item">
+			<div>{{ change.category }}</div>
 			<h3>{{ change.title }}</h3>
 			<p><span class="date">{{ change.date | date: "%B %d, %Y" }}</span> <span class="badge {{ change.type }}">{{ change.type }}</span></p>
 
