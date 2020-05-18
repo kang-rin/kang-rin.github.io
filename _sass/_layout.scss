@@ -266,7 +266,7 @@ nav > ul {
 .nav-item2 {
 	font-family: "Open Sans", sans-serif;
 	line-height: 1;
-	li{
+	> li{
 		margin-left: 10px;
 		border: 1px solid red;
 	}
@@ -500,7 +500,7 @@ img {
 }
 
 .docs-list {
-	border: 1px solid red;
+	border: 1px solid blue;
 }
 
 
