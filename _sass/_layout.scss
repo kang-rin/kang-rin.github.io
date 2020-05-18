@@ -280,6 +280,7 @@ nav > ul {
 		color: rgba(6, 6, 6, 0.98);
 		text-decoration: none;
 		font-size: 1.5rem;
+		padding-left: 10px;
 	}
 
 	&.current > a,
@@ -498,7 +499,7 @@ img {
 }
 
 .docs-list {
-	border: 1px solid red;
+	border: 1px solid blue;
 }
 
 
