@@ -11,7 +11,7 @@ title: index
         <a href="{{ site.baseurl }}{{ items.first.url }}"><h4>{{ group.name }}</h4></a>
         <ul>
             {% for item in items %}
-            <li class="nav-item {% if item.url == page.url %}current{% endif %}">
+            <li class="nav-item2 {% if item.url == page.url %}current{% endif %}">
                 <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a> <span  class="my-date">{{ item.date | date: "%Y-%m-%d" }}</span></li>
             {% endfor %}
         </ul>
