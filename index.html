@@ -5,10 +5,11 @@ title: index
 <div class="docs-list">
 	{% for change in site.docs %}
 		{% if  change.category =='django' %}
+		<div><h3>django</h3></div>
 		<div class="changelog-item">
 			<ul>
 				<li>
-					<div class="title"><a href="/{{ change.path }}" class="btn">{{ change.title }}</a><span class="date">{{ change.date | date: "%B %d, %Y" }}</span></div>
+					<div class="title"><a href="/{{ change.baseurl }}" class="btn">{{ change.title }}</a><span class="date">{{ change.date | date: "%B %d, %Y" }}</span></div>
 
 				</li>
 			</ul>
