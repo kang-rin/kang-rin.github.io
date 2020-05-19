@@ -1,9 +1,4 @@
----
-title: python
-category: python
-order: 1
-date: 2019-12-21
----
+2019-11-11-python-post.md
 
 ## 리스트 컴프리헨션
 https://wikidocs.net/22805
