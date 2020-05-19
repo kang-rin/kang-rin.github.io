@@ -3,6 +3,7 @@ title: 복수 APP에서 templates 설정
 category: django
 order: 1
 date: 2019-10-11
+comments: true
 ---
 
 ```
