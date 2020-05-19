@@ -1,7 +1,7 @@
 # ----
 # Site
 
-title: kang-rin 개발 일지
+title: kang-rin 개발 일지(config)
 url: "https://kang-rin.github.io/"
 baseurl:
 google_analytics_key: "UA-166755820-1"
@@ -17,7 +17,7 @@ author:
 social:
   name: kang-rin 개발 일지
   links:
-    - https://github.com/CloudCannon/edition-jekyll-template
+    - https://kang-rin.github.io/
 
 # -----
 # Build
