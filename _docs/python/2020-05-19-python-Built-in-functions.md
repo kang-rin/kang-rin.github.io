@@ -3,6 +3,7 @@ title: Python 내장함수 (Built-in Functions) 모
 category: python
 order: 1
 date: 2020-05-19
+comments: true
 ---
 
 
