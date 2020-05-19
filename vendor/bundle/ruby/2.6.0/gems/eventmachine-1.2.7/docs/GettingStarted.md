@@ -507,7 +507,6 @@ TBD
 This tutorial ends here. Congratulations! You have learned quite a bit about EventMachine.
 
 
-
 ## What to read next ##
 
 The documentation is organized as a {file:docs/DocumentationGuidesIndex.md number of guides}, covering all kinds of
