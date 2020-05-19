@@ -4,7 +4,7 @@
 title: kang-rin 개발 일지
 url: "https://long-pig.cloudvent.net"
 baseurl:
-google_analytics_key:
+google_analytics_key: "UA-166755820-1"
 show_full_navigation: true
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
@@ -78,5 +78,4 @@ types:
   - minor
   - major
 
-google_analytics_key:UA-166755820-1
 
