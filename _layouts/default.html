@@ -74,6 +74,9 @@
     <article class="content">
         {{ content }}
     </article>
+
+    {% include ../disqus.html %}
+
 </section>
 
 <script>
@@ -81,8 +84,6 @@
         document.body.classList.toggle("nav-open");
     });
 </script>
-
-{% include ../disqus.html %}
 
 
 </body>
