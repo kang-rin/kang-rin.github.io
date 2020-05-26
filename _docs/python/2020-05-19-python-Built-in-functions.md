@@ -35,3 +35,18 @@ result
 5
 5
  ```
+
+### string 모듈 함수
+* [join()](https://zetawiki.com/wiki/%ED%8C%8C%EC%9D%B4%EC%8D%AC_join())
+ ```
+리스트의 특정 구분자를 추가하여 문자열로 변환
+list = ['a','b','c']
+print( ",".join(list) ) # a,b,c
+ ```
+
+* [split()](https://zetawiki.com/wiki/%ED%8C%8C%EC%9D%B4%EC%8D%AC_split())
+ ```
+str 문자열을 ','를 구분으로 하여 l 리스트로 변경
+list = ['a','b','c']
+print( ",".split(list) ) #  ['a', 'b', 'c']
+ ```
